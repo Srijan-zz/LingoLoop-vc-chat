@@ -25,6 +25,14 @@ const authRoutes = require('./routes/authRoutes')
 const userRoutes = require('./routes/userRoutes')
 const chatRoutes = require('./routes/chatRoutes')
 
+
+//go one above current dir, go one above i.e. project folder then frontend then dist 
+app.use('/api/auth', authRoutes)
+app.use('/api/users',userRoutes)
+app.use('/api/chat',chatRoutes)
+
+
+
 //for deploymwent
 if(process.env.NODE_ENV==='production'){
     app.use(express.static(path.join(_dirname,"../Frontend/dist")))
@@ -33,10 +41,6 @@ if(process.env.NODE_ENV==='production'){
         res.sendFile(path.join(_dirname,"../Frontend/dist/index.html"))
     })
 }
-//go one above current dir, go one above i.e. project folder then frontend then dist 
-app.use('/api/auth', authRoutes)
-app.use('/api/users',userRoutes)
-app.use('/api/chat',chatRoutes)
 //db function
 const {connectDb}= require('./config/db')
 
