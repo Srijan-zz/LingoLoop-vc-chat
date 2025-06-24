@@ -32,6 +32,7 @@ app.use('/api/users',userRoutes)
 app.use('/api/chat',chatRoutes)
 
 
+//to put after routes
 
 //for deploymwent
 if(process.env.NODE_ENV==='production'){
