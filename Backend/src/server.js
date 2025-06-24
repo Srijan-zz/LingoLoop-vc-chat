@@ -27,10 +27,10 @@ const chatRoutes = require('./routes/chatRoutes')
 
 //for deploymwent
 if(process.env.NODE_ENV==='production'){
-    app.use(express.static(path.join(_dirname,"../frontend/dist")))
+    app.use(express.static(path.join(_dirname,"../Frontend/dist")))
 
     app.get("*",(req,res)=>{
-        res.sendFile(path.join(_dirname,"../frontend/dist/index.html"))
+        res.sendFile(path.join(_dirname,"../Frontend/dist/index.html"))
     })
 }
 //go one above current dir, go one above i.e. project folder then frontend then dist 
