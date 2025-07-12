@@ -68,7 +68,7 @@ function HomePage() {
         {isHome &&(
           <div className="bg-base-200 rounded-xl p-6 sm:p-8 mb-10 shadow-md text-center">
       <h1 className="text-3xl sm:text-4xl font-bold mb-2 text-primary">
-        Welcome to LangConnect 🌍
+        Welcome to LingoLoop 🌍
       </h1>
       <p className="text-base-content opacity-80 text-lg max-w-xl mx-auto mb-4">
         Connect with fellow language learners around the world. Practice through real-time chats, video calls, and build lasting friendships.
